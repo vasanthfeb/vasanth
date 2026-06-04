@@ -1,20 +1,20 @@
 const bg = document.querySelector('.bg-image');
-const sections = document.querySelectorAll('.section');
 
-window.addEventListener('scroll',()=>{
+window.addEventListener('scroll', () => {
 
-    let blurValue = 0;
+    const scrollTop = window.pageYOffset;
 
-    sections.forEach(section=>{
+    const maxBlur = 12;
 
-        const rect = section.getBoundingClientRect();
+    const blur = Math.min(scrollTop / 250, maxBlur);
 
-        if(rect.top <= window.innerHeight/2){
-            blurValue = section.dataset.blur;
-        }
+    bg.style.filter = `
+        blur(${blur}px)
+        brightness(${100-(blur*2)}%)
+    `;
 
-    });
-
-    bg.style.filter = `blur(${blurValue}px) scale(1.08)`;
+    bg.style.transform = `
+        scale(${1.1 + blur/120})
+    `;
 
 });
