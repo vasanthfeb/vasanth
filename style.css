@@ -431,7 +431,7 @@ letter-spacing:2px;
 
 .contact-section{
     padding:120px 0;
-    text-align:center;
+    /* text-align:center; */
 }
 
 .contact-title{
@@ -445,7 +445,7 @@ letter-spacing:2px;
 
     max-width:650px;
 
-    margin:auto;
+    /* margin:auto; */
 
     color:rgba(255,255,255,.75);
 
@@ -458,7 +458,7 @@ letter-spacing:2px;
 
     display:flex;
 
-    justify-content:center;
+    /* justify-content:center; */
 
     flex-wrap:wrap;
 
