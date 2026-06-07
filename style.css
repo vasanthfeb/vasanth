@@ -269,13 +269,13 @@ letter-spacing:2px;
 .projects-title{
     font-size:clamp(40px,5vw,65px);
     font-weight:700;
-    color:#fff;
+    color:#ffffff;
     margin-bottom:20px;
 }
 
 .projects-description{
     max-width:700px;
-    color:rgba(255,255,255,.75);
+    color:rgb(255, 255, 255);
     line-height:1.8;
     margin-bottom:70px;
 }
@@ -431,9 +431,26 @@ letter-spacing:2px;
 p{
     font-size:19px;
 }
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
 .contact-section{
     padding:120px 0;
     /* text-align:center; */
+}
+@media (max-width: 768px){
+
+    .skills-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .skill-card{
+        width:100%;
+    }
+
 }
 
 .contact-title{
