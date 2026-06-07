@@ -275,11 +275,194 @@ letter-spacing:2px;
 
 .projects-description{
     max-width:700px;
-    color:rgb(255, 255, 255);
+     color:rgba(255,255,255,.75);
     line-height:1.8;
     margin-bottom:70px;
 }
+.portfolio-tabs{
 
+    display:flex;
+    gap:15px;
+
+    margin:40px 0;
+}
+
+.tab-btn{
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.3s;
+}
+
+.tab-btn.active{
+
+    background:#fff;
+
+    color:#000;
+}
+
+.tab-content{
+
+    display:none;
+}
+
+.tab-content.active{
+
+    display:block;
+}
+
+.portfolio-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+}
+
+.portfolio-item{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+}
+.contact-buttons a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:15px 28px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(20px);
+
+    transition:.4s ease;
+}
+
+.contact-buttons a i{
+    font-size:16px;
+}
+
+.contact-buttons a:hover{
+    transform:translateY(-5px);
+}
+.portfolio-item img,
+.portfolio-item video{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:25px;
+}
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+@media(max-width:768px){
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+.portfolio-item img,
+.portfolio-item video{
+
+    width:100%;
+    height:700px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    cursor:pointer;
+}
+
+.lightbox{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.95);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.lightbox img{
+
+    max-width:90%;
+    max-height:90%;
+
+    border-radius:20px;
+}
+
+.close-lightbox{
+
+    position:absolute;
+
+    top:20px;
+    right:30px;
+
+    font-size:40px;
+
+    color:#fff;
+
+    cursor:pointer;
+}
+.portfolio-item{
+
+    overflow:hidden;
+
+    border-radius:20px;
+}
+
+.portfolio-item img,
+.portfolio-item video{
+
+    transition:.5s;
+}
+
+.portfolio-item:hover img,
+.portfolio-item:hover video{
+
+    transform:scale(1.05);
+}
 .project-card{
 
     display:grid;
@@ -430,6 +613,7 @@ letter-spacing:2px;
 }
 p{
     font-size:19px;
+     color:rgba(255,255,255,.75);
 }
 .skills-grid{
     display:grid;
