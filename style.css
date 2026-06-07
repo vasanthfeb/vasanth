@@ -428,7 +428,9 @@ letter-spacing:2px;
     }
 
 }
-
+p{
+    font-size:19px;
+}
 .contact-section{
     padding:120px 0;
     /* text-align:center; */
